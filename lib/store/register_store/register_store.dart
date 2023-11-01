@@ -15,6 +15,9 @@ abstract class _RegisterStore with Store {
   bool loading = false;
 
   @observable
+  bool proceedButtonActive = false;
+
+  @observable
   String username;
 
   @observable

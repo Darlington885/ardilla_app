@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:ardilla/constants/colors.dart';
 import 'package:ardilla/constants/fonts.dart';
 import 'package:ardilla/constants/image_asset.dart';
@@ -14,8 +16,10 @@ import 'package:ardilla/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
+import '../../main.dart';
+
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key key}) : super(key: key);
+   LoginScreen({Key key,}) : super(key: key);
   static const routeName = '/login';
 
   @override
@@ -189,20 +193,18 @@ class _LoginScreenState extends State<LoginScreen> {
                           controller: passwordController,
                           type: TextInputType.text,
                           hint: 'Password',
-                          obscureText: passwordVisible,
+                          obscureText:store.passwordVisible,
                           onChanged: (text) {
                             store.password = text;
                           },
-                          suffixIcon: passwordVisible
+                          suffixIcon: store.passwordVisible
                               ? IconButton(
                                   icon: Image.asset(
                                     assetEyeOpen,
                                     height: 20,
                                   ),
                                   onPressed: () {
-                                    setState(() {
-                                      passwordVisible = false;
-                                    });
+                                    store.passwordVisible = false;
                                   },
                                 )
                               : IconButton(
@@ -211,9 +213,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     height: 20,
                                   ),
                                   onPressed: () {
-                                    setState(() {
-                                      passwordVisible = true;
-                                    });
+                                    store.passwordVisible = true;
                                   },
                                 ),
                           prefixIcon: Padding(
@@ -268,7 +268,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 FocusScope.of(context).unfocus();
 
                                   store.submit(context, (s) {
-
                                   }, (e) {
                                     showCustomDialog(context, "Notification", e);
                                   });

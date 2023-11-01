@@ -417,9 +417,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20,),
 
-                SizedBox(height: 20,),
+
+                SizedBox(height: 40,),
                 CarouselSlider(
                   items: [
                     investImage(startColor: Color.fromRGBO(136, 7, 247, 0.1), endColor: Color.fromRGBO(217, 217, 217, 0),

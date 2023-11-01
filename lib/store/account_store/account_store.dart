@@ -16,6 +16,9 @@ abstract class _AccountStore with Store {
   bool loading = false;
 
   @observable
+  bool proceedButtonActive = false;
+
+  @observable
   String email;
 
 

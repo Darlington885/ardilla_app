@@ -18,16 +18,22 @@ Map<int, Color> color =
 class AppColors {
   static final MaterialColor materialColor1 = MaterialColor(0xFF8807F7, color);
 
-   static const Color lightPurpleColor= Color.fromRGBO(136, 7, 247, 1);
-   static const Color purpleColor= Color.fromRGBO(61, 0, 114, 1);
-   static const Color whiteColor= Color.fromRGBO(255, 255, 255, 1);
-   static const Color whiteColor2= Color.fromRGBO(255, 255, 255, 0);
-   static const Color textColor= Color.fromRGBO(107, 114, 128, 1);
-   static const Color textColor2= Color.fromRGBO(61, 0, 114, 1);
+  static const Color lightPurpleColor= Color.fromRGBO(136, 7, 247, 1);
+  static const Color lightPurpleColor2 = Color.fromRGBO(243, 230, 254, 1);
+  static const Color purpleColor= Color.fromRGBO(61, 0, 114, 1);
+  static const Color whiteColor= Color.fromRGBO(255, 255, 255, 1);
+  static const Color whiteColor2= Color.fromRGBO(255, 255, 255, 0);
+  static const Color textColor= Color.fromRGBO(107, 114, 128, 1);
+  static const Color textColor2= Color.fromRGBO(61, 0, 114, 1);
   static const Color redColor = Color.fromRGBO( 205, 3, 29, 1);
   static const Color cyanColor = Color.fromRGBO( 20, 184, 166, 1);
   static const Color containerColor = Color.fromRGBO( 249, 249, 249, 1);
   static const Color greenColor = Color.fromRGBO(34, 197, 94, 1);
+  static const Color darkGreenColor = Color.fromRGBO(6, 150, 105, 1);
+  static const Color fuschiaPinkColor = Color.fromRGBO(230, 53, 109, 1);
+  static const Color yellowColor = Color.fromRGBO(245, 158, 11, 1);
+  static const Color lightYellowColor = Color.fromRGBO(254, 252, 232, 1);
+  static const Color pinkishColor = Color.fromRGBO(252, 232, 238, 1);
 
   static const Color hintColor = Color.fromRGBO( 156, 163, 175, 1);
   static const Color textColor3 = Color.fromRGBO( 33, 33, 33, 1);
@@ -40,15 +46,6 @@ class AppColors {
   static const Color switchColor = Color.fromRGBO(61, 0, 114, 0.11);
   static const Color lilacColor = Color.fromRGBO(182, 159, 201, 1);
   static const Color eyeColor = Color.fromRGBO(61, 0, 114, 0.5);
-
-
-
-
-
-
-
-
-
-
+  static const Color fairPinkColor = Color.fromRGBO(232, 53, 109, 1);
 
 }

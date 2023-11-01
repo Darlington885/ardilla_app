@@ -1,6 +1,7 @@
 import 'package:ardilla/constants/colors.dart';
 import 'package:ardilla/constants/fonts.dart';
 import 'package:ardilla/constants/image_asset.dart';
+import 'package:ardilla/data/response_data.dart';
 import 'package:ardilla/utils/alert_dialog.dart';
 import 'package:ardilla/utils/launch_web.dart';
 import 'package:ardilla/utils/navigators.dart';
@@ -48,6 +49,7 @@ class _LeftMenuScreenState extends State<LeftMenuScreen> {
             padding: const EdgeInsets.only(left: 20.0, top: 20.0),
             child: Text(
               "Anita Ojieh",
+              //"${ResponseData.userResponse.lastName} ${ResponseData.userResponse.firstName}",
               textAlign: TextAlign.start,
               style: TextStyle(
                   fontFamily: AppFonts.Cabinet_Grotesk,

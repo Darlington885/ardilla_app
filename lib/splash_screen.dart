@@ -31,14 +31,13 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
-        // statusBarColor: Colors.transparent,
+          statusBarColor: Colors.transparent,
           statusBarIconBrightness: Brightness.light
       ),
       child: Container(
         decoration: new BoxDecoration(
           //image: DecorationImage(image: AssetImage("assets/images/splash.png"), fit: BoxFit.cover),
           image: DecorationImage(image: AssetImage("assets/images/Splash screen.png"), fit: BoxFit.cover),
-
         ),
         child: Center(
             child: Image.asset(appLogo, height: 169, width: 154.07, color: Colors.white,)

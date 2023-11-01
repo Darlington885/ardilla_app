@@ -3,6 +3,7 @@ import 'package:ardilla/constants/fonts.dart';
 import 'package:ardilla/constants/image_asset.dart';
 import 'package:ardilla/constants/text_string.dart';
 import 'package:ardilla/screen/auth/login_screen.dart';
+import 'package:ardilla/screen/register/create_account_screen.dart';
 import 'package:ardilla/screen/register/email_verification_screen.dart';
 import 'package:ardilla/store/account_store/account_store.dart';
 import 'package:ardilla/utils/navigators.dart';
@@ -26,7 +27,7 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   TextEditingController emailController = TextEditingController();
 
-  bool proceedButtonActive = false;
+
 
   @override
   void dispose() {
@@ -65,7 +66,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       padding: const EdgeInsets.only(
                           left: 30, top: 60, right: 8, bottom: 0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
                             onTap: () {
@@ -85,26 +86,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             ),
                           ),
-                          Text(
-                            "",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: AppFonts.Cabinet_Grotesk,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 18,
-                                fontStyle: FontStyle.normal,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            "",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: AppFonts.Cabinet_Grotesk,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 18,
-                                fontStyle: FontStyle.normal,
-                                color: Colors.white),
-                          ),
+                          Expanded(child: Container()),
+
                         ],
                       ),
                     ),
@@ -174,15 +157,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           hint: 'Email address',
                           onChanged: (text) {
                             accountStore.email = text;
-                            if (text.contains(".com") &&
-                                emailController.text.length > 3)
-                              setState(() {
-                                proceedButtonActive = true;
-                              });
-                            else
-                              setState(() {
-                                proceedButtonActive = false;
-                              });
+                            if (text.contains("@") &&
+                                emailController.text.length > 3){
+                              accountStore.proceedButtonActive = true;
+                            }else{
+                              accountStore.proceedButtonActive = false;
+                            }
                           },
                           prefixIcon: Padding(
                             padding: const EdgeInsets.all(15.0),
@@ -207,14 +187,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         height: 54,
                         decoration: BoxDecoration(
                             border: Border.all(
-                                color: proceedButtonActive
+                                color: accountStore.proceedButtonActive
                                     ? AppColors.lightPurpleColor
                                     : AppColors.inactiveColor),
                             borderRadius: BorderRadius.circular(24.0)),
                         width: double.infinity,
                         child: Button(
                             text: 'Continue',
-                            onPressed: proceedButtonActive
+                            onPressed: accountStore.proceedButtonActive
                                 ? () {
                                     FocusScope.of(context).unfocus();
                                     Navigator.pushNamed(context,
@@ -224,7 +204,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             loading: accountStore.loading,
                             loaderColor: Colors.white,
                             textColor: Colors.white,
-                            color: proceedButtonActive
+                            color: accountStore.proceedButtonActive
                                 ? AppColors.lightPurpleColor
                                 : AppColors.inactiveColor),
                       ),

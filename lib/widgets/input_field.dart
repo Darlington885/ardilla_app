@@ -76,7 +76,7 @@ InputDecoration getInputDecoration({
 class InputField extends StatelessWidget {
   const InputField({
     Key key,
-    @required this.label,
+    this.label,
     this.controller,
     FocusNode node,
     this.type,
@@ -158,15 +158,11 @@ class InputField extends StatelessWidget {
           obscureText: obscureText ?? false,
           onChanged: onChanged,
           validator: validator,
-
-
           style: TextStyle(
             fontSize: 16.0,
             fontFamily: AppFonts.Cabinet_Grotesk,
             fontWeight: FontWeight.w600,
-
             color: textColor ?? AppColors.textColor3,
-
           ),
           maxLength: maxLength,
 
