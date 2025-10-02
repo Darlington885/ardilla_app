@@ -1,10 +1,10 @@
 import 'package:ardilla/constants/colors.dart';
 import 'package:ardilla/constants/fonts.dart';
-import 'package:ardilla/screen/dilla/dilla_screen.dart';
-import 'package:ardilla/screen/explore/explore_screen.dart';
-import 'package:ardilla/screen/home/home_screen.dart';
-import 'package:ardilla/screen/learn/learn_screen.dart';
-import 'package:ardilla/screen/save/save_screen.dart';
+import 'package:ardilla/screen/nav/dilla_screen.dart';
+import 'package:ardilla/screen/nav/explore_screen.dart';
+import 'package:ardilla/screen/nav/home_screen.dart';
+import 'package:ardilla/screen/nav/learn_screen.dart';
+import 'package:ardilla/screen/nav/save_screen.dart';
 import 'package:flutter/material.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -41,19 +41,16 @@ class _DashboardScreenState extends State<DashBoardScreen> {
     super.dispose();
   }
 
-  // int _page = 0;
-
   @override
   Widget build(BuildContext context) {
-    // authStore.persistAuth();
     return Scaffold(
       extendBody: true,
       bottomNavigationBar: buildMyNavBar(context),
-
       body: pages[_pageIndex],
     );
   }
 
+  /*
   bottomItem({int index, String title, String icon}) {
     if (index == _pageIndex) {
       return Padding(
@@ -75,11 +72,11 @@ class _DashboardScreenState extends State<DashBoardScreen> {
           children: [
             Image.asset(
               icon,
-              height: title == "Loan" ? 26 : 23,
-              width: title == "Loan" ? 26 : 23,
+              height: 23,
+              width: 23,
               color: AppColors.hintColor,
             ),
-            SizedBox(height: title == "Loan" ? 3 : 5),
+            SizedBox(height: 5),
             Text(
               title,
               style: const TextStyle(
@@ -94,17 +91,17 @@ class _DashboardScreenState extends State<DashBoardScreen> {
       );
     }
   }
+*/
 
-  void onPageChanged(int page) {
-    setState(() {
-      this._pageIndex = page;
-    });
-  }
-
-  void onTabTapped(int index) {
-    this._pageController.jumpToPage(index);
-    // this._pageController.animateToPage(index,duration: const Duration(milliseconds: 500),curve: Curves.easeInOut);
-  }
+  // void onPageChanged(int page) {
+  //   setState(() {
+  //     this._pageIndex = page;
+  //   });
+  // }
+  //
+  // void onTabTapped(int index) {
+  //   this._pageController.jumpToPage(index);
+  // }
 
   Container buildMyNavBar(BuildContext context) {
     return Container(
@@ -183,11 +180,9 @@ class _DashboardScreenState extends State<DashBoardScreen> {
         ),
         _pageIndex == index
             ? Padding(
-                //padding: const EdgeInsets.all(15),
                 padding: const EdgeInsets.only(top: 15.0),
                 child: Image.asset(
                   icon,
-                  //"assets/images/transactionicon.png",
                   color: AppColors.lightPurpleColor,
                   width: 25, height: 20,
                 ),

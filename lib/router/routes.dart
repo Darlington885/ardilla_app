@@ -3,12 +3,12 @@ import 'package:ardilla/main.dart';
 import 'package:ardilla/screen/auth/login_screen.dart';
 import 'package:ardilla/screen/dashboard/dashboard_screen.dart';
 import 'package:ardilla/screen/dashboard/left_menu_screen.dart';
-import 'package:ardilla/screen/home/home_screen.dart';
+import 'package:ardilla/screen/nav/home_screen.dart';
 import 'package:ardilla/screen/onboarding/onboarding_screen.dart';
 import 'package:ardilla/screen/register/email_verification_screen.dart';
 import 'package:ardilla/screen/register/create_account_screen.dart';
 import 'package:ardilla/screen/register/register_screen.dart';
-import 'package:ardilla/screen/save/save_screen.dart';
+import 'package:ardilla/screen/nav/save_screen.dart';
 import 'package:ardilla/splash_screen.dart';
 import 'package:ardilla/video.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +26,8 @@ class RouteGenerator {
       case SaveScreen.routeName:
       case Onboarding.routeName:
         return MaterialPageRoute(builder: (_) => Onboarding());
-      case PlayerVideoAndPopPage.routeName:
-        return MaterialPageRoute(builder: (_) => PlayerVideoAndPopPage());
+      // case PlayerVideoAndPopPage.routeName:
+      //   return MaterialPageRoute(builder: (_) => PlayerVideoAndPopPage());
       case CreateAccountScreen.routeName:
         return MaterialPageRoute(builder: (_) => CreateAccountScreen());
       case RegisterScreen.routeName:

@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Container(
         decoration: new BoxDecoration(
           //image: DecorationImage(image: AssetImage("assets/images/splash.png"), fit: BoxFit.cover),
-          image: DecorationImage(image: AssetImage("assets/images/Splash screen.png"), fit: BoxFit.cover),
+          image: DecorationImage(image: AssetImage("assets/images/splash_screen.png"), fit: BoxFit.cover),
         ),
         child: Center(
             child: Image.asset(appLogo, height: 169, width: 154.07, color: Colors.white,)

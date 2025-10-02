@@ -3,7 +3,6 @@ import 'package:ardilla/constants/fonts.dart';
 import 'package:ardilla/constants/image_asset.dart';
 import 'package:ardilla/constants/text_string.dart';
 import 'package:ardilla/screen/register/register_screen.dart';
-import 'package:ardilla/utils/maths.dart';
 import 'package:flutter/material.dart';
 
 class Onboarding extends StatefulWidget {
@@ -21,7 +20,6 @@ class _OnboardingState extends State<Onboarding> {
       body: Padding(
         padding: const EdgeInsets.only(left: 24.0, right: 24.0),
         child: ListView(
-          // padding: EdgeInsets.zero,
           children: [
             Row(
               children: [

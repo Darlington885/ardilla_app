@@ -249,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           //containerColor: Color(0xFFE8F7FF),
                           label: "Save",
                           onMenuPressed:(){
-                             launchInWebViewWithJavaScript("https://ardilla/save");
+                             //launchInWebViewWithJavaScript("https://ardilla/save");
                           }
                       ),
                       socialMediaHandles(
@@ -257,7 +257,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           //containerColor: AppColors.cyanColor,
                           label: "Learn",
                           onMenuPressed:(){
-                            launchInWebViewWithJavaScript("https://ardilla/learn-more");
+                            //launchInWebViewWithJavaScript("https://ardilla/learn-more");
                           }
                       ),
                       socialMediaHandles(
@@ -1327,7 +1327,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
             Image.asset('assets/images/coming.png', height: 22.3, width: 58.13,)
           ],),
-          //Image.asset("assets/images/line.png", height: 55.5, width: 86.01,)
           Image.asset("assets/images/line.png",)
         ],
       ),

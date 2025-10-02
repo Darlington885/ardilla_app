@@ -5,7 +5,6 @@ import 'package:ardilla/constants/text_string.dart';
 import 'package:ardilla/screen/auth/login_screen.dart';
 import 'package:ardilla/store/register_store/register_store.dart';
 import 'package:ardilla/utils/alert_dialog.dart';
-import 'package:ardilla/utils/maths.dart';
 import 'package:ardilla/utils/navigators.dart';
 import 'package:ardilla/widgets/button.dart';
 import 'package:ardilla/widgets/input_field.dart';

@@ -1,22 +1,16 @@
-import 'dart:async';
 
 import 'package:ardilla/constants/colors.dart';
 import 'package:ardilla/constants/fonts.dart';
 import 'package:ardilla/constants/image_asset.dart';
 import 'package:ardilla/constants/text_string.dart';
-import 'package:ardilla/screen/dashboard/dashboard_screen.dart';
 import 'package:ardilla/screen/register/create_account_screen.dart';
-import 'package:ardilla/screen/register/register_screen.dart';
 import 'package:ardilla/store/login_store/login_store.dart';
 import 'package:ardilla/utils/alert_dialog.dart';
-import 'package:ardilla/utils/maths.dart';
 import 'package:ardilla/utils/navigators.dart';
 import 'package:ardilla/widgets/button.dart';
 import 'package:ardilla/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-
-import '../../main.dart';
 
 class LoginScreen extends StatefulWidget {
    LoginScreen({Key key,}) : super(key: key);
@@ -27,6 +21,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
   LoginStore store = LoginStore();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -116,7 +111,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 50, vertical: 30),
-                  // width: size.width/1.07,
                   width: deviceW / 1.07,
                   height: 15,
                   decoration: BoxDecoration(
@@ -266,13 +260,10 @@ class _LoginScreenState extends State<LoginScreen> {
                               text: 'Log In',
                               onPressed: () {
                                 FocusScope.of(context).unfocus();
-
                                   store.submit(context, (s) {
                                   }, (e) {
                                     showCustomDialog(context, "Notification", e);
                                   });
-
-
                               },
                               loading: store.loading,
                               loaderColor: Colors.white,

@@ -3,10 +3,8 @@ import 'package:ardilla/constants/fonts.dart';
 import 'package:ardilla/constants/image_asset.dart';
 import 'package:ardilla/constants/text_string.dart';
 import 'package:ardilla/screen/register/create_account_screen.dart';
-import 'package:ardilla/utils/maths.dart';
 import 'package:ardilla/utils/navigators.dart';
 import 'package:ardilla/widgets/button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class EmailVerificationScreen extends StatefulWidget {
